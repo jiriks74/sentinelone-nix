@@ -88,6 +88,10 @@ in
       };
     };
 
+    environment.systemPackages = [
+      cfg.package
+    ];
+
     systemd.services.sentinelone = {
       enable = true;
       description = "SentinelOne";
