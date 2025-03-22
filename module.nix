@@ -40,6 +40,7 @@ let
     EOF
 
       chown -R sentinelone:sentinelone ${cfg.dataDir}
+      chmod -R 0755 $(find ${cfg.dataDir} -group sentinelone)
     fi
   '';
 in
